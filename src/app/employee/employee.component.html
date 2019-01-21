@@ -1,0 +1,28 @@
+<!-- <div style="margin:90px"></div> -->
+<h3>Enter Details</h3>
+<div class="form-group">
+  <label>Firstname:</label>
+  <input type="text" class="form-control" [(ngModel)]="obj1.firstName">
+</div>
+<div class="form-group">
+  <label>Lastname:</label>
+  <input type="text" class="form-control" [(ngModel)]="obj1.lastName">
+</div>
+<div class="form-group">
+  <label>Select Position:</label>
+  <select [(ngModel)]="obj1.selectoption" class="form-control">
+    <option *ngFor="let data of employeeArray" value="{{data.position}}" >{{data.position}}</option>
+  </select>
+</div>  
+<div class="form-group">
+  <label>Email address:</label>
+  <input type="email" class="form-control" [(ngModel)]="obj1.email">
+</div>
+<div class="form-group">
+  <label>Address:</label>
+  <input type="text" class="form-control" [(ngModel)]="obj1.address">
+</div>
+
+<button class="btn btn-default" (click)="submitBtn()">Submit</button>
+
+<!-- <app-qa [obj2]="empData"></app-qa> -->
